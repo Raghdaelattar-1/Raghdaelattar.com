@@ -16,18 +16,25 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <style>
         body {
             background-image: linear-gradient( to bottom right,black,#be2e4c, #d60655,#dd6d86,#fefefe );
             background-repeat: no-repeat;
             background-size: auto;
+            overscroll-behavior-x: none;
         }
-        nav{
-            position:fixed;
-            padding-bottom:100px;
-            margin-bottom:100px;
+
+
+
+        nav {
+            position: fixed;
+            padding-bottom: 100px;
+            margin-bottom: 100px;
         }
-  
+
         .container .btn {
             position: relative;
             top: 0;
@@ -147,22 +154,20 @@
 
             .container .btn:active {
                 transform: scale(0.95);
-                border:0px;
+                border: 0px;
             }
 
         .card {
             width: fit-content;
-            height:80vh;
+            height: 80vh;
             height: auto;
             transition: all 0.2s;
             position: relative;
             cursor: pointer;
             background-color: transparent;
-            margin-top:50px;
-            margin-bottom:-100px;
-    
-            animation: move-down1 2s ease-in  alternate-reverse;
-
+            margin-top: 50px;
+            margin-bottom: -100px;
+            animation: move-down1 2s ease-in alternate-reverse;
         }
 
         .card-inner {
@@ -173,21 +178,23 @@
             border-radius: 8px;
             margin-top: 50px;
         }
+
             .card-inner:hover {
                 transform: scale(1.3);
                 height: 100vh;
                 align-content: center;
                 background-color: transparent;
             }
+
         .card:hover {
             transform: scale(1.3);
             border: 0px;
             background-color: transparent;
         }
 
-        
 
-    
+
+
 
         @keyframes move-down1 {
             to {
@@ -196,7 +203,7 @@
         }
 
 
-    
+
 
 
 
@@ -211,7 +218,7 @@
             position: relative;
             overflow: hidden;
             cursor: pointer;
-            font-size:10PX;
+            font-size: 10PX;
         }
 
         .liquid {
@@ -270,7 +277,7 @@
 
         .Dbutton:hover {
             color: #fefefe;
-            font:20px bold;
+            font: 20px bold;
             font-weight: 400;
             word-spacing: 3px;
             letter-spacing: 2px;
@@ -283,31 +290,29 @@
             font-weight: 400;
             word-spacing: 3px;
             letter-spacing: 2px;
-            
         }
 
         .block:hover {
             transform: scale(1.5);
-            position:relative;
-            
-           left:10px;
+            position: relative;
+            left: 10px;
         }
 
-      .myskills{
-          margin-bottom:50px;
-          margin-top:50px;
-      }
+        .myskills {
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
 
         .dcontainer {
             position: relative;
             max-width: 600px;
-            height:100vh;
+            height: 100vh;
             width: 100%;
             background: #282828;
             margin: 0 15px;
             padding: 10px 20px;
             border-radius: 7px;
-            margin-top:60px;
+            margin-top: 60px;
         }
 
             .dcontainer .skill-box {
@@ -357,12 +362,14 @@
             /*progreso de las diferentes lenguajes*/
             width: 100%;
             animation-delay: 0.2s;
-        }  
+        }
+
         .skill-per.eighty {
             /*progreso de las diferentes lenguajes*/
             width: 80%;
             animation-delay: 0.2s;
-        }   
+        }
+
         .skill-per.react {
             /*progreso de las diferentes lenguajes*/
             width: 50%;
@@ -406,6 +413,18 @@
             transform: translateX(-50%) rotate(45deg);
         }
 
+        /* Responsive styles */
+        @media screen and (max-width: 700px) {
+
+            nav {
+               visibility:hidden;
+            }
+            .card {
+                width:100%;
+            }
+        
+        
+        }
     </style>
 
 </head>
