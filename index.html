@@ -168,6 +168,7 @@
             margin-top: 50px;
             margin-bottom: -100px;
             animation: move-down1 2s ease-in alternate-reverse;
+            border:0px;
         }
 
         .card-inner {
@@ -416,15 +417,48 @@
         /* Responsive styles */
         @media screen and (max-width: 700px) {
 
+            body{
+                width:100%;
+                margin:0;
+            }
+
             nav {
                visibility:hidden;
             }
 
             .card {
-                width:80%;
+                width: 100%;
+                
+               
             }
-           
-        
+
+       
+
+            .card-inner {
+                width: inherit;
+                height: inherit;
+               
+                
+            }
+
+                .card-inner:hover {
+                    transform: scale(1);
+                    height: 100vh;
+                   
+                }
+
+            .card:hover {
+                transform: scale(1);
+                border: 0px;
+                background-color: transparent;
+            }
+            .block:hover {
+                transform: scale(1);
+                position: relative;
+                left:0;
+                
+            }
+
         }
     </style>
 
@@ -476,7 +510,7 @@
             <div class="card-inner p-5 pt-0">
                 <div class="nn p-5 relative flex h-auto flex-col items-center transition-all duration-500 md:flex-row md:max-w-2xl" style=" height: 100%; width: 100%; background-color:transparent;">
 
-                    <div class="p-4">
+                    <div class="mm p-4">
                         <h2 class="text-neutral-50 mb-2 text-2xl font-semibold capitalize transition-all duration-500">Hello, I am Raghda Elattar</h2>
                         <p class="text-neutral-50 mb-5 text-sm font-normal leading-5 transition-all duration-500">  a 2024 engineering graduate from Ain Shams University with a strong interest in front-end development. </p>
 
